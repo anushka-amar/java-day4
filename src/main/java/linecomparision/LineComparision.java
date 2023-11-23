@@ -23,10 +23,29 @@ public class LineComparision {
         return Double.parseDouble(df.format(result));
     }
 
+    public static void equality(double line1, double line2){
+
+        Double l1 = Double.valueOf(line1);
+        Double l2 = Double.valueOf(line2);
+
+        boolean res = l1.equals(l2);
+
+       String message = res ? "lines are equal" : "lines are unequal";
+        System.out.println("message");
+    }
+    
     public static void main(String[] args) {
-        System.out.println("Welcome to Line Comparision Computation Program");
+        System.out.println("Welcome to Line Comparison Computation Program");
+
         LineComparision l1 = new LineComparision("line1",1,2,5,6);
+        LineComparision l2 = new LineComparision("line2",3,4,8,9);
+
         double line1 = calc_length(l1);
-        System.out.println(line1);
+        double line2 = calc_length(l2);
+        System.out.println("Length of line1 is: " +line1);
+        System.out.println("Length of line2 is: " +line2);
+
+        equality(line1, line2);
+
     }
 }
