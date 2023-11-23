@@ -31,9 +31,31 @@ public class LineComparision {
         boolean res = l1.equals(l2);
 
        String message = res ? "lines are equal" : "lines are unequal";
-        System.out.println("message");
+        System.out.println(message);
     }
-    
+
+    public static void compare(double line1, double line2){
+
+        Double l1 = Double.valueOf(line1);
+        Double l2 = Double.valueOf(line2);
+
+        int result = l1.compareTo(l2);
+
+        switch (result){
+            case 1:
+                System.out.println("line one is greater than line two");
+                break;
+
+            case -1:
+                System.out.println("line one is smaller than line two");
+                break;
+
+            default:
+                System.out.println("Both the lines are equal");
+                break;
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
 
@@ -46,6 +68,7 @@ public class LineComparision {
         System.out.println("Length of line2 is: " +line2);
 
         equality(line1, line2);
+        compare(line1, line2);
 
     }
 }
