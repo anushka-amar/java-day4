@@ -43,37 +43,4 @@ public class Company {
         return workingDaysPerMonth;
     }
 
-
-    public void checkAtt(){
-        Random random = new Random();
-        int att = (random.nextInt(2));
-
-        switch (att){
-            case 0:
-                System.out.println("Employee is present");
-                break;
-
-            case 1:
-                System.out.println("Employee is absent");
-                break;
-
-            default:
-                System.out.println("INVALID");
-        }
-    }
-
-    public int checkEmpType(){
-        Random random = new Random();
-        int emp_type = random.nextInt(2);
-
-        switch (emp_type){
-            case 0:
-                return 0;
-            case 1:
-                return 1;
-            default:
-                return -1;
-        }
-
-    }
 }
